@@ -1,0 +1,50 @@
+/* reset kecil */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #f4f6f8;
+}
+
+/* animasi hover membesar (admin & user) */
+.btn-scale {
+    transition: transform 0.2s ease;
+}
+
+.btn-scale:hover {
+    transform: scale(1.1);
+}
+/* animasi membesar TANPA ubah style bootstrap */
+.btn-scale {
+    transition: transform 0.2s ease;
+}
+
+.btn-scale:hover {
+    transform: scale(1.1);
+}
+
+/* =====================
+   BUTTON SCALE (BOOTSTRAP FRIENDLY)
+===================== */
+.btn-scale {
+    transition: transform 0.15s ease;
+}
+
+.btn-scale:hover {
+    transform: scale(1.08);
+}
+
+.btn-scale:active {
+    transform: scale(0.95);
+}
+
+#previewImage {
+    transition: transform 0.3s ease;
+}
+
+#previewImage:hover {
+    transform: scale(1.05);
+}
+
