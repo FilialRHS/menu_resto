@@ -4,8 +4,8 @@
         <div class="bg-white shadow-sm border-b border-gray-100 sticky top-0 z-10">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex justify-between items-center">
                 <div>
-                    <h1 class="text-2xl font-bold text-gray-900 tracking-tight">Elegance Menu</h1>
-                    <p class="text-sm text-amber-600 font-medium tracking-wide uppercase mt-1">Premium Selection</p>
+                    <h1 class="text-2xl font-bold text-gray-900 tracking-tight">Menu Restoran</h1>
+                    <p class="text-sm text-amber-600 font-medium tracking-wide uppercase mt-1">Pilih Salah Satu</p>
                 </div>
                 @if(session('success'))
                     <div class="text-sm text-green-600 bg-green-50 px-3 py-1 rounded-full border border-green-200">
@@ -108,7 +108,7 @@
                     <span class="text-2xl font-bold text-gray-900" id="total-price">Rp 0</span>
                 </div>
                 
-                <button onclick="alert('Order Feature coming soon!')" class="group bg-gray-900 hover:bg-black text-white px-8 py-3 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all flex items-center gap-3 transform hover:-translate-y-0.5">
+                <button onclick="alert('Pesanan Diterima')" class="group bg-gray-900 hover:bg-black text-white px-8 py-3 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all flex items-center gap-3 transform hover:-translate-y-0.5">
                     <span>Pesan Sekarang</span>
                     <span id="total-items-badge" class="bg-amber-500 text-white text-xs font-bold px-2 py-0.5 rounded-full hidden">0</span>
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-amber-500 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">

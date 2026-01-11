@@ -2,10 +2,10 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\MenuController;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [MenuController::class, 'index'])
+    ->name('home');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -17,13 +17,8 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-// Menu Routes
-use App\Http\Controllers\MenuController;
-
-// Public: Menus index for everyone (Pembeli)
 Route::get('/menus', [MenuController::class, 'index'])->name('menus.index');
 
-// Protected: CRUD for Admin
 Route::middleware(['auth', 'is_admin'])->prefix('admin')->group(function () {
      Route::get('/menus', [MenuController::class, 'adminIndex'])->name('menus.admin.index');
     Route::get('/menus/create', [MenuController::class, 'create'])->name('menus.create');
@@ -33,5 +28,8 @@ Route::middleware(['auth', 'is_admin'])->prefix('admin')->group(function () {
     Route::delete('/menus/{menu}', [MenuController::class, 'destroy'])->name('menus.destroy');
 
 });
+
+Route::get('/', [MenuController::class, 'index'])->name('menus.index');
+Route::get('/menus', [MenuController::class, 'index'])->name('menus.index');
 
 require __DIR__.'/auth.php';
